@@ -27,19 +27,18 @@ public class ColombianFlagUI {
     }
 
     public void initializeColor() {
-    	flagArray[0] = new ColombianFlag("y", 0, 0, 0, 100, 10);
-    	flagArray[1] = new ColombianFlag("b", 10, 0, 10, 100, 17);
-    	flagArray[2] = new ColombianFlag("r", 17, 0, 17, 100, 22);
+    	flagArray[0] = new ColombianFlag("y", 0, 0, 0, 100, 15);
+    	flagArray[1] = new ColombianFlag("b", 15, 0, 15, 100, 23);
+    	flagArray[2] = new ColombianFlag("r", 23, 0, 23, 100, 30);
     }
 
     public void initilalizeThread() {
     	threadArray[0] = new ColombianFlagThread(flagArray[0], this, 10);
     	threadArray[1] = new ColombianFlagThread(flagArray[1], this, 30);
-    	threadArray[2] = new ColombianFlagThread(flagArray[2], this, 50);
+    	threadArray[2] = new ColombianFlagThread(flagArray[2], this, 40);
     }
     
     public void changeFlag(int horizontal, int vertical, String color) {
-
         if (color.equals("y")) {
             System.out.print(ESC + horizontal + "G" + ESC + vertical + "d" + yellow + " " + ESC);
         } else if (color.equals("b")) {
